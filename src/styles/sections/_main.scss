@@ -4,15 +4,16 @@ main {
   }
   .contact-form {
     @media screen and ($desktop) {
+    //   align-items: center;
       display: flex;
       gap: $space5;
       
       & > div {
-      max-width: 50%;
+      max-width: 40%;
     }
     }
     
-    h2,
+    h2, h3,
     p {
       color: white;
     }
