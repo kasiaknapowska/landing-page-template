@@ -1,30 +1,28 @@
 header {
-    height: 100vh;
-    position: relative;
-    // .hero-image {
-    //   height: 100%;
-    //   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    //     url("../assets/hero.jpg");
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   position: relative;
-    // }
-    .hero-content {
-      text-align: center;
-      padding: $space4 0;
+  height: 100vh;
+  padding: $space4 0;
+  position: relative;
+
+  p {
+    color: white;
+    &:first-child {
       max-width: 90%;
       margin: 0 auto;
-      p {
-        color: white;
-      }
-      @media screen and ($tablet) {
-        padding: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+      text-align: right;
     }
   }
-  
+  .hero-content {
+    text-align: center;
+    padding: $space4 0;
+    max-width: 90%;
+    margin: 0 auto;
+
+    @media screen and ($tablet) {
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

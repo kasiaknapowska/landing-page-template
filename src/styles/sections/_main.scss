@@ -4,16 +4,17 @@ main {
   }
   .contact-form {
     @media screen and ($desktop) {
-    //   align-items: center;
+      //   align-items: center;
       display: flex;
       gap: $space5;
-      
+
       & > div {
-      max-width: 40%;
+        max-width: 40%;
+      }
     }
-    }
-    
-    h2, h3,
+
+    h2,
+    h3,
     p {
       color: white;
     }
@@ -32,18 +33,43 @@ main {
       input,
       textarea {
         width: 100%;
-        min-height: 3rem;
+
         border-radius: $borderRadius;
         border: none;
         margin-top: calc(0.5 * $space1);
         margin-bottom: $space2;
         padding: 0 $space2;
         font-family: $webFont;
-        font-size: .8rem;
+        font-size: 0.8rem;
+        &:focus {
+          border: 1px solid $colorPrimary;
+        }
+        &::placeholder {
+          opacity: 0.5;
+        }
+      }
+      input:not([type="checkbox"]) {
+        min-height: 3rem;
       }
       textarea {
-        
         padding-top: $space2;
+      }
+      & > div {
+        padding: calc($space1 * .5) 0;
+      }
+      input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+        line-height: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: relative;
+        top: 3px;
+        color: white;
+        &:checked {
+          accent-color: $colorPrimary;
+          color: white;
+        }
       }
       button {
         align-self: center;

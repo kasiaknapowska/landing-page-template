@@ -40,6 +40,10 @@ body {
   a {
     text-decoration: none;
     color: inherit;
+    &.call-us {
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
   }
   button.primary {
     @include button($colorPrimary, none, white)
