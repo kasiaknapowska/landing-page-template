@@ -1,5 +1,52 @@
 main {
-    .offer {
-        height: 50vh;
+  .offer {
+    background-color: white;
+  }
+  .contact-form {
+    @media screen and ($desktop) {
+      display: flex;
+      gap: $space5;
+      
+      & > div {
+      max-width: 50%;
     }
+    }
+    
+    h2,
+    p {
+      color: white;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: $space4 0;
+      padding: $space4 $space4 $space2 $space4;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: $borderRadius;
+      label {
+        @include websiteFont(500, $colorNeutralVeryDark, 0.8rem);
+      }
+      input,
+      textarea {
+        width: 100%;
+        min-height: 3rem;
+        border-radius: $borderRadius;
+        border: none;
+        margin-top: calc(0.5 * $space1);
+        margin-bottom: $space2;
+        padding: 0 $space2;
+        font-family: $webFont;
+        font-size: .8rem;
+      }
+      textarea {
+        
+        padding-top: $space2;
+      }
+      button {
+        align-self: center;
+      }
+    }
+  }
 }
