@@ -9,35 +9,49 @@ body {
   font-family: "Poppins", sans-serif;
   h1 {
     @include websiteFont(700, white, 2.5rem) {
-      margin: 2rem 0;
+      margin: $space4 0;
     }
   }
   h2 {
-    @include websiteFont(700, $colorNeutralDark, 2rem) {
-      margin: 2rem 0;
-      margin-top: 0;
+    @include websiteFont(500, $colorNeutralDark, 2rem) {
+      margin: $space4 0;
     }
   }
-  p {
-    @include websiteFont(400, $colorNeutralDark, 1.2rem) {
+  h3 {
+    @include websiteFont(500, $colorNeutralDark, 1.5rem) {
+      margin: $space4 0;
+    }
+  }
+  h4 {
+    @include websiteFont(500, $colorNeutralDark, 1.2rem) {
+      margin: $space4 0;
+    }
+  }
+  p, address {
+    @include websiteFont(400, $colorNeutralDark, 1.1rem) {
       margin: 1rem 0;
     }
   }
-  button {
-    background-color: $colorPrimary;
-    padding: 1.2rem 2rem;
-    margin: 2rem 0;
-    border: none;
-    border-radius: 3rem;
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  small {
+    @include websiteFont(300, white, .8rem) {
+        margin: 1rem 0;
+      }
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  button.primary {
+    @include button($colorPrimary, none, white)
+  }
+  button.secondary {
+    @include button(transparent, 1px solid $colorPrimary, $colorPrimary)
   }
   .container {
     width: 90%;
     max-width: $sizeContent;
-    margin: 5rem auto;
+    margin: 0 auto;
+    padding: $space5 0;
     display: table;
     .center-group {
       display: table-cell;
