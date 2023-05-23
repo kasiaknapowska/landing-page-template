@@ -1,8 +1,14 @@
 import './styles/main.scss'
-import add from './func'
+import { Form } from './js/form'
 import logo from './assets/logo.png'
-
-console.log(add(2, 4))
 
 const logoImg = document.getElementById('logo');
 logoImg.src = logo;
+
+
+const form = document.querySelector("form");
+
+if (form) {
+    const fields = ["name", "phone", "email", "message", "acceptdata", "acceptpolicy"];
+    const validator = new Form(form, fields)
+}

@@ -29,6 +29,7 @@ main {
       border-radius: $borderRadius;
       label {
         @include websiteFont(500, $colorNeutralVeryDark, 0.8rem);
+        margin: 0 $space1 0 0;
       }
       input,
       textarea {
@@ -74,6 +75,14 @@ main {
       button {
         align-self: center;
       }
+    }
+    .input-error {
+      border: 1px solid $colorAlert;
+    }
+    .error-message {
+      @include websiteFont(500, $colorAlert, 0.8rem);
+      display: inline-block;
+      
     }
   }
 }

@@ -28,7 +28,7 @@ body {
     }
   }
   p, address {
-    @include websiteFont(400, $colorNeutralDark, 1.1rem) {
+    @include websiteFont(400, $colorNeutralDark, 1rem) {
       margin: 1rem 0;
     }
   }

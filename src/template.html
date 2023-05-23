@@ -53,21 +53,34 @@
         <h3>Nie chcesz czekać? <br> Zadzwoń teraz! <br> <a href="tel: +48322037425">32 203 74 25</a></h3>
       </div>
         <form>
-          <label for="name">Imię i nazwisko*</label>
-          <input type="text" name="name" id="name" placeholder="Imię i nazwisko" required>
-          <label for="phone">Telefon*</label>
-          <input type="text" name="phone" id="phone" placeholder="Numer telefonu" required>
-          <label for="email">E-mail*</label>
-          <input type="email" name="email" id="email" placeholder="Adres e-mail" required>
-          <label for="question">Treść wiadomości</label>
-          <textarea name="question" id="question" rows="5" placeholder="Treść wiadomości"></textarea>
           <div>
-            <input type="checkbox" id="acceptdata" name="acceptdata" value="acceptdata" required>
-            <label for="acceptdata">Wyrażam zgodę na przetwarzanie danych*</label>
+          <label for="name">Imię i nazwisko*</label><span class="error-message"></span>
+          <input type="text" name="name" id="name" placeholder="Imię i nazwisko" >
+          
           </div>
           <div>
-            <input type="checkbox" id="acceptpolicy" name="acceptpolicy" value="acceptpolicy" required>
+            <label for="phone">Telefon*</label><span class="error-message"></span>
+          <input type="text" name="phone" id="phone" placeholder="Numer telefonu" >
+          
+          </div>
+          <div>
+            <label for="email">E-mail*</label><span class="error-message"></span>
+          <input type="text" name="email" id="email" placeholder="Adres e-mail">
+          
+          </div>
+          <div>
+            <label for="message">Treść wiadomości</label>
+          <textarea name="message" id="message" rows="5" placeholder="Treść wiadomości"></textarea>
+          </div>
+          <div>
+            <input type="checkbox" id="acceptdata" name="acceptdata" value="acceptdata" >
+            <label for="acceptdata">Wyrażam zgodę na przetwarzanie danych*</label>
+            <span class="error-message"></span>
+          </div>
+          <div>
+            <input type="checkbox" id="acceptpolicy" name="acceptpolicy" value="acceptpolicy" >
             <label for="acceptpolicy">Akceptuję politykę prywatności*</label>
+            <span class="error-message"></span>
             </div>
           <button class="primary" type="submit">Wyślij</button>
         </form>
