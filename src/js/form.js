@@ -41,19 +41,25 @@ export class Form {
     if (field.name !== "message" && field.value.trim() === "") {
       this.setStatus(field, "Wypełnij to pole", "error");
       return false;
-    } else if (field.type === "checkbox" && !field.checked) {
-      this.setStatus(field, "Zaznacz zgodę", "error");
-      return false;
-    } else if (field.name === "phone" && field.value.length < 7 || !isFinite(field.value)) {
+    }
+    if (
+      (field.name === "phone" && (field.value.length < 7 ||
+      !isFinite(field.value)))
+    ) {
       this.setStatus(field, "Podaj prawidłowy numer telefonu", "error");
       return false;
-    } else if (field.name === "email" && !field.value.match(emailValidRegEx)) {
+    }
+
+    if (field.name === "email" && !field.value.match(emailValidRegEx)) {
       this.setStatus(field, "Podaj prawidłowy adres e-mail", "error");
       return false;
-    } else {
-      this.setStatus(field, null, "success");
-      return true;
     }
+    if (field.type === "checkbox" && !field.checked) {
+      this.setStatus(field, "Zaznacz zgodę", "error");
+      return false;
+    }
+    this.setStatus(field, null, "success");
+    return true;
   }
 
   setStatus(field, message, status) {
