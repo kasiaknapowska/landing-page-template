@@ -2,8 +2,22 @@ footer {
     background-color: $colorNeutralVeryDark;
     min-height: 50vh;
     color: white;
+  position: relative;
     h4, address, p {
         color: white;
        
     }
+    
+    
+    .social-icons {
+        text-align: right;
+        .social-icon {
+            margin: $space2;
+        }
+        }
+    .copyright {
+        position: absolute;
+        bottom: calc($space1 * .5);
+        left: $space1;
+        }
 }

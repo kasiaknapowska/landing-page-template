@@ -33,9 +33,8 @@ body {
     }
   }
   small {
-    @include websiteFont(300, white, .8rem) {
-        margin: 1rem 0;
-      }
+    @include websiteFont(300, white, .6rem);
+    opacity: 0.5;
   }
   a {
     text-decoration: none;
@@ -58,6 +57,7 @@ body {
     margin: 0 auto;
     padding: $space5 0;
     display: table;
+    position: relative;;
     .center-group {
       display: table-cell;
       vertical-align: middle;
