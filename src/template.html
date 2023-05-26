@@ -58,7 +58,23 @@
             <a href="tel: +48322037425">32 203 74 25</a>
           </h3>
         </div>
-        <form>
+        <form
+          id="contact-form"
+          method="POST"
+          action="https://formsubmit.co/392a7c06442cc891eb166a14299290f5"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New lead from LP template"
+          />
+          <input type="hidden" name="_next" value="http://localhost:3000/" />
+          <!-- <input
+            type="hidden"
+            name="_autoresponse"
+            value="Dziękujemy za przesłanie formularza! Skontaktujemy się najszybciej jak to będzie możliwe"
+          /> -->
+          <!-- <input type="hidden" name="_cc" value="another@email.com"> -->
           <div>
             <label for="name">Imię i nazwisko*</label
             ><span class="error-message"></span>
@@ -103,7 +119,7 @@
               type="checkbox"
               id="acceptdata"
               name="acceptdata"
-              value="acceptdata"
+              value="Wyrażam zgodę na przetwarzanie danych"
             />
              
             <label for="acceptdata"
@@ -116,18 +132,21 @@
               type="checkbox"
               id="acceptpolicy"
               name="acceptpolicy"
-              value="acceptpolicy"
+              value="Akceptuję politykę prywatności"
             />
               <label for="acceptpolicy">Akceptuję politykę prywatności*</label>
             <span class="error-message"></span>
           </div>
-          <button class="primary" type="submit">Wyślij</button>
+          <button class="primary" type="submit" value="submit">Wyślij</button>
         </form>
       </section>
     </main>
     <footer>
       <div class="container">
-        <h4>ROMAN BORCZYK <br> Klinika Implantologii i Stomatologii Estetycznej</h4>
+        <h4>
+          ROMAN BORCZYK <br />
+          Klinika Implantologii i Stomatologii Estetycznej
+        </h4>
         <address>Katowice, ul. Czajek 5</address>
         <p><a href="tel:+48322037425"> 32 203 74 25</a></p>
         <p>recepcja@borczyk.pl</p>
@@ -135,22 +154,21 @@
 
         <div class="social-icons">
           <a
-          href="https://pl-pl.facebook.com/KlinikaBorczyk/"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <img id="fb" class="social-icon" alt="facebook" />
-        </a>
+            href="https://pl-pl.facebook.com/KlinikaBorczyk/"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <img id="fb" class="social-icon" alt="facebook" />
+          </a>
 
-        <a
-          href="https://www.instagram.com/klinika_borczyk"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <img id="in" class="social-icon" alt="instagram" />
-        </a>
+          <a
+            href="https://www.instagram.com/klinika_borczyk"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <img id="in" class="social-icon" alt="instagram" />
+          </a>
         </div>
-        
       </div>
       <small class="copyright">Copyright KKnapowska</small>
     </footer>

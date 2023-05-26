@@ -23,13 +23,10 @@ export class Form {
       });
 
       if (errors === 0) {
-        this.formData = {
-          name: this.form.elements["name"].value,
-          phone: this.form.elements["phone"].value,
-          email: this.form.elements["email"].value,
-          message: this.form.elements["message"].value,
-        };
-        console.log(this.formData);
+        this.formData = new FormData(this.form);
+        // console.log(this.formData.get("name"));
+        // this.sendMail(this.formData);
+        this.form.submit();
       }
     });
   }
@@ -43,8 +40,8 @@ export class Form {
       return false;
     }
     if (
-      (field.name === "phone" && (field.value.length < 7 ||
-      !isFinite(field.value)))
+      field.name === "phone" &&
+      (field.value.length < 7 || !isFinite(field.value))
     ) {
       this.setStatus(field, "Podaj prawidłowy numer telefonu", "error");
       return false;
@@ -75,4 +72,24 @@ export class Form {
       field.classList.remove("input-error");
     }
   }
+
+  // sendMail(formData) {
+  //   fetch("https://formsubmit.co/ajax/392a7c06442cc891eb166a14299290f5", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       title: "New lead from LP template",
+  //       name: `${formData.get("name")}`,
+  //       email: `${formData.get("email")}`,
+  //       phone: `${formData.get("phone")}`,
+  //       message: `${formData.get("message")}`,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data))
+  //     .catch((error) => console.log(error));
+  // }
 }

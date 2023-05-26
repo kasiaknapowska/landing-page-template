@@ -14,7 +14,7 @@ inIcon.src = instagram;
 
 
 
-const form = document.querySelector("form");
+const form = document.querySelector("#contact-form");
 
 if (form) {
     const fields = ["name", "phone", "email", "message", "acceptdata", "acceptpolicy"];
