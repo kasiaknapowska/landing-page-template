@@ -1,7 +1,6 @@
 @use "./placeholders";
 
 @mixin websiteFont($weight: 400, $color, $size: 1rem) {
-    font-family: $webFont;
     font-size: $size;
     font-weight: $weight;
     color: $color;

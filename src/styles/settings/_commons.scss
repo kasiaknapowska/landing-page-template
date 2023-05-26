@@ -37,6 +37,7 @@ body {
     opacity: 0.5;
   }
   a {
+    font-family: $webFont;
     text-decoration: none;
     color: inherit;
     &.call-us {
@@ -44,12 +45,18 @@ body {
       font-size: 1.3rem;
       display: inline-block;
     }
+    &.primary {
+      display: inline-block;
+      @include button($colorPrimary, none, white);
+    }
   }
   button.primary {
-    @include button($colorPrimary, none, white)
+    @include button($colorPrimary, none, white);
+    font-family: $webFont;
   }
   button.secondary {
-    @include button(transparent, 1px solid $colorPrimary, $colorPrimary)
+    @include button(transparent, 1px solid $colorPrimary, $colorPrimary);
+    font-family: $webFont;
   }
   .container {
     width: 90%;
