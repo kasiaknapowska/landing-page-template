@@ -41,15 +41,10 @@ var Form = /*#__PURE__*/function () {
           }
         });
         if (errors === 0) {
-          // this.formData = {
-          //   name: this.form.elements["name"].value,
-          //   phone: this.form.elements["phone"].value,
-          //   email: this.form.elements["email"].value,
-          //   message: this.form.elements["message"].value,
-          // };
           _this.formData = new FormData(_this.form);
-          console.log(_this.formData.get("name"));
-          _this.sendMail(_this.formData);
+          // console.log(this.formData.get("name"));
+          // this.sendMail(this.formData);
+          _this.form.submit();
         }
       });
     }
@@ -91,29 +86,26 @@ var Form = /*#__PURE__*/function () {
         field.classList.remove("input-error");
       }
     }
-  }, {
-    key: "sendMail",
-    value: function sendMail(formData) {
-      fetch("https://formsubmit.co/ajax/392a7c06442cc891eb166a14299290f5", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: "".concat(formData.get("name")),
-          email: "".concat(formData.get("email")),
-          phone: "".concat(formData.get("phone")),
-          message: "".concat(formData.get("message"))
-        })
-      }).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        return console.log(data);
-      })["catch"](function (error) {
-        return console.log(error);
-      });
-    }
+
+    // sendMail(formData) {
+    //   fetch("https://formsubmit.co/ajax/392a7c06442cc891eb166a14299290f5", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Accept: "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       title: "New lead from LP template",
+    //       name: `${formData.get("name")}`,
+    //       email: `${formData.get("email")}`,
+    //       phone: `${formData.get("phone")}`,
+    //       message: `${formData.get("message")}`,
+    //     }),
+    //   })
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data))
+    //     .catch((error) => console.log(error));
+    // }
   }]);
   return Form;
 }();
@@ -780,7 +772,7 @@ module.exports = __webpack_require__.p + "logo.png";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"bundle": 0
+/******/ 			"index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -836,4 +828,4 @@ if (form) {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle983b3c0cc9fe59302390.js.map
+//# sourceMappingURL=indexdde6b0a7a6aa802e2f52.js.map

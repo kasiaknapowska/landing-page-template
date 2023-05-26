@@ -1,10 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
+    index: path.resolve(__dirname, "src/index.js"),
+    thankyou: path.resolve(__dirname, "src/js/thankyou.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -46,6 +48,8 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ title: "LP template", filename: "index.html", template: 'src/template.html' }),
+    new HtmlWebpackPlugin({ title: "LP template", filename: "index.html", template: 'src/index.html', chunks: ['index'] }),
+    new HtmlWebpackPlugin({title: "Thank You page", filename: "thankyou.html", template: 'src/pages/thankyou.html', chunks: ['thankyou']}),
+    // new CleanWebpackPlugin()
   ],
 };
