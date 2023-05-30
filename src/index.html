@@ -7,6 +7,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <button id="scrollToTop" class="scroll-to-top-btn" title="Do góry"><div></div></button>
     <img class="background-image" />
     <header>
       <p>
@@ -21,12 +22,12 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
           officia, eum numquam quas, dicta dolor aliquam deleniti.
         </p>
-        <button class="primary">Dowiedz się więcej</button>
+        <a href="#offer" class="primary">Dowiedz się więcej</a>
       </div>
     </header>
 
     <main>
-      <section class="offer">
+      <section id="offer" class="offer">
         <div class="container">
           <div class="center-group">
             <h2>Lorem ipsum dolor sit amet consectetur, adipisicing!</h2>
@@ -40,7 +41,7 @@
               Asperiores velit aliquam inventore neque eveniet molestiae dolore
               magni ipsa doloribus corrupti.
             </p>
-            <button class="secondary">Umów wizytę</button>
+            <a href="tel: +48322037425" class="secondary">Zadzwoń i umów wizytę</a>
           </div>
         </div>
       </section>
@@ -150,7 +151,7 @@
         <address>Katowice, ul. Czajek 5</address>
         <p><a href="tel:+48322037425"> 32 203 74 25</a></p>
         <p>recepcja@borczyk.pl</p>
-        <p>www.borczyk.pl</p>
+        <p><a href="https://borczyk.pl/" target="_blank">www.borczyk.pl</a></p>
 
         <div class="social-icons">
           <a
@@ -168,6 +169,13 @@
           >
             <img id="in" class="social-icon" alt="instagram" />
           </a>
+          <a
+          href="https://www.youtube.com/channel/UCEZpavPFvS4TxTMh-w9CW1g"
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          <img id="yt" class="social-icon" alt="youtube" />
+        </a>
         </div>
       </div>
       <small class="copyright">Copyright KKnapowska</small>
