@@ -56,7 +56,7 @@ main {
         padding-top: $space2;
       }
       & > div {
-        padding: calc($space1 * .5) 0;
+        padding: calc($space1 * 0.5) 0;
       }
       input[type="checkbox"] {
         width: 1rem;
@@ -72,6 +72,40 @@ main {
           color: white;
         }
       }
+
+      .accept-data,
+      .accept-policy {
+        position: relative;
+        .tooltip {
+          visibility: hidden;
+          position: absolute;
+          bottom: 150%;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.3s;
+          background-color: $colorNeutralVeryDark;
+          @include websiteFont(400, white, 0.7rem);
+          padding: $space2;
+          width: 400px;
+          border-radius: $borderRadius;
+        }
+        .tooltip::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: $colorNeutralVeryDark transparent transparent
+            transparent;
+        }
+        &:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
       button {
         align-self: center;
       }
@@ -82,7 +116,6 @@ main {
     .error-message {
       @include websiteFont(500, $colorAlert, 0.8rem);
       display: inline-block;
-      
     }
   }
 }

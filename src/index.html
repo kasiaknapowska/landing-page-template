@@ -7,7 +7,9 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <button id="scrollToTop" class="scroll-to-top-btn" title="Do góry"><div></div></button>
+    <button id="scrollToTop" class="scroll-to-top-btn" title="Do góry">
+      <div></div>
+    </button>
     <img class="background-image" />
     <header>
       <p>
@@ -41,7 +43,9 @@
               Asperiores velit aliquam inventore neque eveniet molestiae dolore
               magni ipsa doloribus corrupti.
             </p>
-            <a href="tel: +48322037425" class="secondary">Zadzwoń i umów wizytę</a>
+            <a href="tel: +48322037425" class="secondary"
+              >Zadzwoń i umów wizytę</a
+            >
           </div>
         </div>
       </section>
@@ -69,7 +73,11 @@
             name="_subject"
             value="New lead from LP template"
           />
-          <input type="hidden" name="_next" value="http://localhost:3000/thankyou.html" />
+          <input
+            type="hidden"
+            name="_next"
+            value="http://localhost:3000/thankyou.html"
+          />
           <!-- <input
             type="hidden"
             name="_autoresponse"
@@ -122,10 +130,21 @@
               name="acceptdata"
               value="Wyrażam zgodę na przetwarzanie danych"
             />
-             
-            <label for="acceptdata"
-              >Wyrażam zgodę na przetwarzanie danych*</label
+
+            <label for="acceptdata" class="accept-data">
+               <span class="tooltip"
+                >Wyrażam zgodę na przetwarzanie moich danych osobowych przez
+                Roman Borczyk Klinika Implantologii i Stomatologii Estetycznej
+                sp.j. z siedzibą w Katowicach w celu przesłania informacji
+                handlowych drogą elektroniczną na podany adres e-mail zgodnie z
+                ustawą z dnia 18 lipca 2002r o świadczeniu usług droga
+                elektroniczną (Dz.U. 2002 Nr 144, 1204 z późn. zm.), zgodnie z
+                art. 23 ustawy z dnia 29 sierpnia 1997r. o ochronie danych
+                osobowych (tekst jednolity Dz. U. z 2015r., poz. 2135).</span
+              >
+              Wyrażam zgodę na przetwarzanie danych*</label
             >
+
             <span class="error-message"></span>
           </div>
           <div>
@@ -135,7 +154,28 @@
               name="acceptpolicy"
               value="Akceptuję politykę prywatności"
             />
-              <label for="acceptpolicy">Akceptuję politykę prywatności*</label>
+
+             
+            <label for="acceptpolicy" class="accept-policy">
+              <span class="tooltip"
+                >Administratorem danych osobowych jest firma Roman Borczyk
+                Klinika Implantologii i Stomatologii Estetycznej sp.j. w
+                Katowicach, ul. Czajek 5a, 40-533 Katowice. Podanie danych oraz
+                zgoda na ich przetwarzanie w celach nie związanych z procesem
+                leczenia jest dobrowolna. Niniejsze zgody obejmują przetwarzanie
+                danych w przyszłości, jeśli nie zmieni się cel przetwarzania lub
+                jeśli zgoda nie zostanie cofnięta. Przysługuje Państwu prawo
+                dostępu do treści danych osobowych, ich poprawienia, złożenia
+                sprzeciwu wobec przetwarzania danych w celach marketingowych lub
+                przekazania ich innym odbiorcom, w tym prawo do zaprzestania ich
+                przetwarzania w celach marketingowych. W tym celu prosimy
+                skontaktować się z recepcją Kliniki przy ulicy Czajek 5a w
+                Katowicach osobiście, telefonicznie (+48 322037425) lub mailowo
+                (obsluga.pacjenta@borczyk.pl)</span
+              >
+              Akceptuję politykę prywatności*</label
+            >
+
             <span class="error-message"></span>
           </div>
           <button class="primary" type="submit" value="submit">Wyślij</button>
@@ -170,12 +210,12 @@
             <img id="in" class="social-icon" alt="instagram" />
           </a>
           <a
-          href="https://www.youtube.com/channel/UCEZpavPFvS4TxTMh-w9CW1g"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <img id="yt" class="social-icon" alt="youtube" />
-        </a>
+            href="https://www.youtube.com/channel/UCEZpavPFvS4TxTMh-w9CW1g"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <img id="yt" class="social-icon" alt="youtube" />
+          </a>
         </div>
       </div>
       <small class="copyright">Copyright KKnapowska</small>
