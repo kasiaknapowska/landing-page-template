@@ -1,11 +1,14 @@
 @import "./variables";
 
 %button {
-    padding: 1.2rem 2rem;
-    margin: 2rem 0;
+    padding: $space2 $space4;
+    margin: $space4 0;
     border-radius: $borderRadius;
     font-weight: 500;
+    font-size: $pmobile;
     text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 140%;
+    text-align: center;
     cursor: pointer;
 }

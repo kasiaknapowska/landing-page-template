@@ -1,3 +1,4 @@
+//colors
 $colorPrimary: #4abbc0;
 $colorSecondary: #eef7f7;
 
@@ -8,8 +9,25 @@ $colorNeutralLight: rgb(220, 220, 220);
 
 $colorAlert: #db295b;
 
+//fonts
 $webFont: "Poppins", sans-serif;
 
+//fonts' sizes
+$h1desktop: 3rem;
+$h2desktop: 2rem;
+$h3desktop: 1.25rem;
+$h4desktop: 1.25rem;
+$pdesktop: 1rem;
+
+$h1mobile: 2.2rem;
+$h2mobile: 1.5rem;
+$h3mobile: 1rem;
+$h4mobile: 1rem;
+$pmobile: .9rem;
+
+
+
+//spaces
 $space1: 0.5rem;
 $space2: 1rem;
 $space3: 1.5rem;
@@ -18,7 +36,10 @@ $space5: 5rem;
 $sizeContent: 900px;
 $sizeContentS: 600px;
 
+//borders
 $borderRadius: .3rem; 
 
+
+//screen sizes
 $tablet: "min-width: 600px";
 $desktop: "min-width: 900px";

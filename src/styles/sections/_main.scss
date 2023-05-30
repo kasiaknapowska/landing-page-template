@@ -4,7 +4,6 @@ main {
   }
   .contact-form {
     @media screen and ($desktop) {
-      //   align-items: center;
       display: flex;
       gap: $space5;
 
@@ -24,9 +23,12 @@ main {
       display: flex;
       flex-direction: column;
       margin: $space4 0;
-      padding: $space4 $space4 $space2 $space4;
+      padding: $space4 $space2 $space2 $space2;
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: $borderRadius;
+      @media screen and ($tablet) {
+        padding: $space4 $space4 $space2 $space4;
+      }
       label {
         @include websiteFont(500, $colorNeutralVeryDark, 0.8rem);
         margin: 0 $space1 0 0;
@@ -69,7 +71,6 @@ main {
         color: white;
         &:checked {
           accent-color: $colorPrimary;
-          color: white;
         }
       }
 
@@ -78,16 +79,20 @@ main {
         position: relative;
         .tooltip {
           visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s;
           position: absolute;
           bottom: 150%;
           z-index: 1;
-          opacity: 0;
-          transition: opacity 0.3s;
           background-color: $colorNeutralVeryDark;
           @include websiteFont(400, white, 0.7rem);
           padding: $space2;
-          width: 400px;
+          width: 70vw;
+          left: -1rem;
           border-radius: $borderRadius;
+          @media screen and ($tablet) {
+            width: 400px;
+          }
         }
         .tooltip::after {
           content: "";
@@ -108,6 +113,10 @@ main {
 
       button {
         align-self: center;
+        width: 100%;
+        @media screen and ($tablet) {
+          width: auto;
+        }
       }
     }
     .input-error {
