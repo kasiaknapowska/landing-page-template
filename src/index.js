@@ -1,5 +1,6 @@
 import './styles/main.scss';
 import { Form } from './js/form';
+import { ScrollToTop } from './js/scrollToTop';
 import logo from './assets/logo.png';
 import facebook from './assets/icon-fb.svg';
 import instagram from './assets/icon-insta.svg';
@@ -21,4 +22,10 @@ const form = document.querySelector("#contact-form");
 if (form) {
     const fields = ["name", "phone", "email", "message", "acceptdata", "acceptpolicy"];
     const validator = new Form(form, fields);
+}
+
+const scrollToTopBtn = document.querySelector("#scrollToTop");
+
+if (scrollToTopBtn) {
+    const top = new ScrollToTop(scrollToTopBtn);
 }
