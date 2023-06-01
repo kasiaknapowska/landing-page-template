@@ -1,6 +1,7 @@
 import "./styles/main.scss";
 import { Form } from "./js/form";
 import { ScrollToTop } from "./js/scrollToTop";
+import { Cookies } from "./js/cookies";
 import logo from "./assets/logo.png";
 import facebook from "./assets/icon-fb.svg";
 import instagram from "./assets/icon-insta.svg";
@@ -36,6 +37,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
   //scroll to top button
   const scrollToTopBtn = document.querySelector("#scrollToTop");
   const top = new ScrollToTop(scrollToTopBtn);
+
+// cookies banner
+
+const cookieBanner = document.querySelector(".cookies");
+const cookies = new Cookies(cookieBanner);
 
   //tooltips
   // if (window.innerWidth < 900) {
