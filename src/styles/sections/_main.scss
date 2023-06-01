@@ -74,8 +74,7 @@ main {
         }
       }
 
-      .accept-data,
-      .accept-policy {
+      .checkbox-container {
         position: relative;
         .tooltip {
           visibility: hidden;
@@ -105,9 +104,11 @@ main {
           border-color: $colorNeutralVeryDark transparent transparent
             transparent;
         }
-        &:hover .tooltip {
-          visibility: visible;
-          opacity: 1;
+        @media screen and ($desktop) {
+          &:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+          }
         }
       }
 

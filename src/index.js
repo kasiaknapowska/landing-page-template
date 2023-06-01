@@ -6,18 +6,21 @@ import facebook from "./assets/icon-fb.svg";
 import instagram from "./assets/icon-insta.svg";
 import youtube from "./assets/icon-yt.svg";
 
-const logoImg = document.getElementById("logo");
-logoImg.src = logo;
-const fbIcon = document.getElementById("fb");
-fbIcon.src = facebook;
-const inIcon = document.getElementById("in");
-inIcon.src = instagram;
-const ytIcon = document.getElementById("yt");
-ytIcon.src = youtube;
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
 
-const form = document.querySelector("#contact-form");
+  //icons
+  const logoImg = document.getElementById("logo");
+  logoImg.src = logo;
+  const fbIcon = document.getElementById("fb");
+  fbIcon.src = facebook;
+  const inIcon = document.getElementById("in");
+  inIcon.src = instagram;
+  const ytIcon = document.getElementById("yt");
+  ytIcon.src = youtube;
 
-if (form) {
+  //form
+  const form = document.querySelector("#contact-form");
   const fields = [
     "name",
     "phone",
@@ -28,18 +31,31 @@ if (form) {
   ];
   const validator = new Form(form, fields);
 
-  const tooltips = document.getElementsByClassName("tooltip");
-  console.log(tooltips);
-  tooltips.forEach((tooltip) => {
-    tooltip.parentElement.addEventListener("click", () => {
-        tooltip.style.visibility = "visible" ? "hidden" : "visible";
-        tooltip.style.opacity = "1" ? "0" : "1";
-    });
-  });
-}
-
-const scrollToTopBtn = document.querySelector("#scrollToTop");
-
-if (scrollToTopBtn) {
+  //scroll to top button
+  const scrollToTopBtn = document.querySelector("#scrollToTop");
   const top = new ScrollToTop(scrollToTopBtn);
-}
+
+  //tooltips
+
+  if (window.innerWidth < 900) {
+    const tooltips = Array.from(document.getElementsByClassName("tooltip"));
+
+    tooltips.forEach((tooltip) => {
+      tooltip.nextElementSibling.addEventListener("click", (e) => {
+        tooltip.style.visibility = "visible";
+        tooltip.style.opacity = 1;
+      });
+    });
+
+    tooltips.forEach((tooltip) => {
+      document.addEventListener("click", (e) => {
+        const isOutside = !e.target.closest(".checkbox-container");
+
+        if (isOutside || e.target === tooltip) {
+          tooltip.style.visibility = "hidden";
+          tooltip.style.opacity = 0;
+        }
+      });
+    });
+  }
+});
