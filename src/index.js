@@ -36,26 +36,29 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const top = new ScrollToTop(scrollToTopBtn);
 
   //tooltips
+  // if (window.innerWidth < 900) {
+  //   const tooltips = Array.from(document.getElementsByClassName("tooltip"));
 
-  if (window.innerWidth < 900) {
-    const tooltips = Array.from(document.getElementsByClassName("tooltip"));
+  //   tooltips.forEach((tooltip) => {
+  //     tooltip.nextElementSibling.addEventListener("click", (e) => {
+  //       tooltip.style.visibility = "visible";
+  //       tooltip.style.opacity = 1;
+  //     });
+  //   });
 
-    tooltips.forEach((tooltip) => {
-      tooltip.nextElementSibling.addEventListener("click", (e) => {
-        tooltip.style.visibility = "visible";
-        tooltip.style.opacity = 1;
-      });
-    });
+  //   tooltips.forEach((tooltip) => {
+  //     document.addEventListener("click", (e) => {
+  //       const isOutside = !e.target.closest(".checkbox-container");
 
-    tooltips.forEach((tooltip) => {
-      document.addEventListener("click", (e) => {
-        const isOutside = !e.target.closest(".checkbox-container");
+  //       if (isOutside || e.target === tooltip) {
+  //         tooltip.style.visibility = "hidden";
+  //         tooltip.style.opacity = 0;
+  //       }
+  //     });
+  //   });
+  // }
 
-        if (isOutside || e.target === tooltip) {
-          tooltip.style.visibility = "hidden";
-          tooltip.style.opacity = 0;
-        }
-      });
-    });
-  }
+
+
+
 });

@@ -104,6 +104,13 @@ main {
           border-color: $colorNeutralVeryDark transparent transparent
             transparent;
         }
+
+       @media screen and (max-width: 899px) {
+        &:focus-within .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+       }
         @media screen and ($desktop) {
           &:hover .tooltip {
             visibility: visible;
