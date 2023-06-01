@@ -9,6 +9,8 @@ import youtube from "./assets/icon-yt.svg";
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 
+  console.log(document.cookie)
+
   //icons
   const logoImg = document.getElementById("logo");
   logoImg.src = logo;

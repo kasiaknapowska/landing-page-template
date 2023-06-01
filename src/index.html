@@ -7,9 +7,6 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <button id="scrollToTop" class="scroll-to-top-btn" title="Do góry">
-      <div></div>
-    </button>
     <img class="background-image" />
     <header>
       <p>
@@ -140,7 +137,7 @@
               sierpnia 1997r. o ochronie danych osobowych (tekst jednolity Dz.
               U. z 2015r., poz. 2135).</span
             >
-            <label for="acceptdata" >
+            <label for="acceptdata">
                 Wyrażam zgodę na przetwarzanie danych*</label
             >
 
@@ -169,9 +166,7 @@
               telefonicznie (+48 322037425) lub mailowo (obsluga.pacjenta
               @borczyk.pl)</span
             >
-            <label for="acceptpolicy" >
-              Akceptuję politykę prywatności*</label
-            >
+            <label for="acceptpolicy"> Akceptuję politykę prywatności*</label>
 
             <span class="error-message"></span>
           </div>
@@ -217,5 +212,17 @@
       </div>
       <small class="copyright">Copyright KKnapowska</small>
     </footer>
+    <div class="cookies">
+      <p>
+        Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym
+        poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich
+        użycie.
+      </p>
+      <button class="secondary btn-s close-cookie">Zgoda</button>
+    </div>
+    <button id="scrollToTop" class="scroll-to-top-btn" title="Do góry">
+      <div></div>
+    </button>
+    
   </body>
 </html>

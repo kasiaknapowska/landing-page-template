@@ -52,7 +52,7 @@ body {
       font-size: $h4desktop;
     }
     p {
-      font-size: $pdesktop
+      font-size: $pdesktop;
     }
   }
   small {
@@ -82,36 +82,13 @@ body {
     font-family: $webFont;
   }
   button.secondary {
-    @include button(transparent, 1px solid $colorPrimary, $colorPrimary);
-    font-family: $webFont;
-  }
-  .scroll-to-top-btn {
     @include button(transparent, 2px solid $colorPrimary, $colorPrimary);
     font-family: $webFont;
-    position: fixed;
-    bottom: $space3;
-    right: 5%;
-    width: 3rem;
-    height: 3rem;
-    z-index: 99;
-    margin: 0;
-    padding: 0;
-    @media screen and ($desktop) {
-      right: $space3;
-    }
-    
-
-    div {
-      width: 1rem;
-      height: 1rem;
-      border-top: 2px solid $colorPrimary;
-      border-left: 2px solid $colorPrimary;
-      transform: rotate(45deg);
-      position: relative;
-      left: 14px;
-      top: 4px;
-    }
   }
+  button.btn-s {
+    padding: $space1 $space2;
+  }
+
   .container {
     width: 90%;
     max-width: $sizeContent;
@@ -141,4 +118,46 @@ body {
   position: fixed;
   left: -1px;
   z-index: -1;
+}
+.cookies {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background-color: $colorNeutralVeryDark;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button.secondary {
+    margin: $space2;
+  }
+  p {
+    @include websiteFont(300, white, 0.8rem);
+  }
+}
+.scroll-to-top-btn {
+  @include button(transparent, 2px solid $colorPrimary, $colorPrimary);
+  font-family: $webFont;
+  position: fixed;
+  bottom: $space5;
+  right: 5%;
+  width: 3rem;
+  height: 3rem;
+  z-index: 99;
+  margin: 0;
+  padding: 0;
+  @media screen and ($desktop) {
+    right: $space3;
+  }
+
+  div {
+    width: 1rem;
+    height: 1rem;
+    border-top: 2px solid $colorPrimary;
+    border-left: 2px solid $colorPrimary;
+    transform: rotate(45deg);
+    position: relative;
+    left: 14px;
+    top: 4px;
+  }
 }
